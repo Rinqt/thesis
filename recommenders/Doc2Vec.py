@@ -81,6 +81,6 @@ def doc2vec_calculate_similarity(model, item_id, item_list):
     for sim_item in similar_items[1:]:
         item_key = int(sim_item[0])
         if item_key in item_list.keys():
-            recommended_items.append(str(item_key))
+            recommended_items.append(int(item_key))
 
     return recommended_items[:10]

@@ -41,6 +41,6 @@ def item2vec_calculate_similarity(model, item_id, item_list):
     recommended_items_set = []
     for rec_item in similar_items:
         if int(rec_item[0]) in item_list:
-            recommended_items_set.append(rec_item[0])
+            recommended_items_set.append(int(rec_item[0]))
 
     return recommended_items_set[:10]
